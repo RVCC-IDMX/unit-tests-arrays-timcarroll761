@@ -62,6 +62,7 @@ test('findElementByValue', () => {
   expect(findElementByValue([1, 2, 3], 1)).toBe(0);
   expect(findElementByValue([1, 2, 3], 2)).toBe(1);
   expect(findElementByValue([1, 2, 3], 3)).toBe(2);
+  expect(findElementByValue([1, 2, 3], 4)).toBe(-1);
 });
 
 test('changeElementAtIndex', () => {

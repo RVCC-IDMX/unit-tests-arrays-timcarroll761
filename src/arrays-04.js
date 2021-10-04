@@ -16,7 +16,11 @@
  * ? hint: use Math.abs() to get the absolute value of a number
  */
 function getAbsoluteSum(nums) {
-  // write your code here & return value
+  let total = 0;
+  nums.forEach((element) => {
+    total += Math.abs(element);
+  });
+  return total;
 }
 
 /**
@@ -27,7 +31,8 @@ function getAbsoluteSum(nums) {
  * ? hint: use the filter() array method - https://youtu.be/JY5HUDMudew
  */
 function removeStrings(arr) {
-  // write your code here & return value
+  const newArr = arr.filter((item) => typeof item !== 'string');
+  return newArr;
 }
 
 /**
@@ -49,7 +54,10 @@ function removeStrings(arr) {
  * ? hint 2: use the spread operator with Math.min() and Math.max()
  */
 function findMinMax(arr) {
-  // write your code here & return value
+  const newArr = new Array(2);
+  newArr[0] = Math.min(...arr);
+  newArr[1] = Math.max(...arr);
+  return newArr;
 }
 
 /**
@@ -73,7 +81,12 @@ function findMinMax(arr) {
  * ? https://bit.ly/39ASLc0
  */
 function getTelNo(numbers) {
-  // write your code here & return value
+  const newArr = [...numbers];
+  newArr.splice(0, 0, '(');
+  newArr.splice(4, 0, ')');
+  newArr.splice(5, 0, ' ');
+  newArr.splice(9, 0, '-');
+  return newArr.join('');
 }
 
 /**
@@ -119,7 +132,11 @@ function getTelNo(numbers) {
  * ?
  */
 function getUnmatchedInteger(numbers) {
-  // write your code here & return value
+  let total = 0;
+  numbers.forEach((element) => {
+    total += element;
+  });
+  return total;
 }
 
 module.exports = {
